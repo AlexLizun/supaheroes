@@ -25,4 +25,10 @@ public class Main{
         }
     }
 
+    public class Supaheroes{
+        int Id;
+        String Name;
+        String Surname;
+        String Login;
+    }
 }
