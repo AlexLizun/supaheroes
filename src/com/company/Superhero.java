@@ -12,7 +12,7 @@ public class Superhero {
     String login;
     @Override
     public String toString() {
-        return String.format(name + " and " + surname);
+        return String.format(id + " " + name + " " + surname +" " + login);
     }
 // отправь на github, как сделаешь :)
     //override tostring java - в гугле

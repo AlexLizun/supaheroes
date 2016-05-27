@@ -19,21 +19,27 @@ public class Main {
         while (in.hasNext()) {
             String info[] = in.nextLine().split(" "); // кул
             Superhero hero = new Superhero();
-            hero.id = info[0]; // здесь должна падать ошибка. У тебя String, пусть пока остаётся.
+            // здесь должна падать ошибка. У тебя String, пусть пока остаётся.
             // Потом надо будет переделать на long - числовое значение, ведь это айдишник
-            hero.name = info[1];
-            hero.surname = info[2];
-            hero.login = info[3];
+            if (info.length == 4) {
+                hero.id = info[0];
+                hero.name = info[1];
+                hero.surname = info[2];
+                hero.login = info[3];
+            }
+            else {
+                hero.id = info[0];
+                hero.name = info[1];
+                hero.login = info[2];
+            }
+
             // В общем пока что норм)
             ar.add(hero);
             System.out.println(hero); // здесь будешь выводить hero вместо info[2]
             // Только сначала переопредели .toString()
 
         }
-        int razmer = ar.size();
-       /* for (int i = 0; i <razmer ; i++) {
-            System.out.println(ar.get(i));
-        }*/
+
 
     }
 
