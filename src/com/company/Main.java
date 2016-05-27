@@ -2,10 +2,11 @@ package com.company;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.lang.String;
 import java.util.ArrayList;
-
+import java.lang.Math;
 // вообще нужно импортить классы через import
 // но так как Superhero тоже в пакете com.company, то Main его "видит"
 public class Main {
@@ -39,8 +40,19 @@ public class Main {
             // Только сначала переопредели .toString()
 
         }
+        PrintWriter pw = new PrintWriter(new File("c:/supaheroes/friends.txt"));
+        for (int i = 1; i <ar.size(); i++) {
 
+            int fid =  (int)(Math.random()*10+1);
+            int sid =  (int)(Math.random()*10+1);
+            if (fid!= sid){
+                pw.println(fid + " and " + sid);
+            }
+            System.out.println(fid);
+            System.out.println(sid);
 
+        }
+        pw.close();
     }
 
 }

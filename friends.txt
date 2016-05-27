@@ -1,0 +1,10 @@
+3 and 8
+1 and 2
+2 and 9
+4 and 8
+3 and 10
+4 and 8
+2 and 1
+6 and 2
+8 and 6
+1 and 9
