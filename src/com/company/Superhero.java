@@ -1,15 +1,18 @@
 package com.company;
 
 
+import java.util.ArrayList;
+
 /**
  * Created by alexis on 26.05.2016.
  */
 
 public class Superhero {
-    String id;
-    String name;
-    String surname;
-    String login;
+    private String id;
+    private String name;
+    private String surname;
+    private String login;
+
 
 
     public void setId(String id) {
@@ -42,7 +45,7 @@ public class Superhero {
 
     @Override
     public String toString() {
-        return String.format(id + " " + name + " " + surname +" " + login);
+        return String.format(id + " " + name + " " + surname + " " + login);
     }
 // отправь на github, как сделаешь :)
     //override tostring java - в гугле

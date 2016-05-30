@@ -11,6 +11,7 @@ import java.lang.Math;
 // но так как Superhero тоже в пакете com.company, то Main его "видит"
 public class Main {
 
+    public static final String FRIENDS = "friends.txt";
     public static final String FILE_PATH = "users.txt";
     private static ArrayList<Superhero> ar = new ArrayList<Superhero>();
 
@@ -23,15 +24,15 @@ public class Main {
             // здесь должна падать ошибка. У тебя String, пусть пока остаётся.
             // Потом надо будет переделать на long - числовое значение, ведь это айдишник
             if (info.length == 4) {
-                hero.id = info[0];
-                hero.name = info[1];
-                hero.surname = info[2];
-                hero.login = info[3];
+                hero.setId(info[0]);
+                hero.setName(info[1]);
+                hero.setSurname(info[2]);
+                hero.setLogin(info[3]);
             }
             else {
-                hero.id = info[0];
-                hero.name = info[1];
-                hero.login = info[2];
+                hero.setId(info[0]);
+                hero.setName(info[1]);
+                hero.setLogin(info[2]);
             }
 
             // В общем пока что норм)
@@ -41,18 +42,27 @@ public class Main {
 
         }
         PrintWriter pw = new PrintWriter(new File("c:/supaheroes/friends.txt"));
-        for (int i = 1; i <ar.size(); i++) {
+        for (int i = 0; i < 20; i++) {
 
-            int fid =  (int)(Math.random()*10+1);
-            int sid =  (int)(Math.random()*10+1);
-            if (fid!= sid){
-                pw.println(fid + " and " + sid);
+            int fid =  (int)(Math.random()*ar.size()+1);
+            int sid =  (int)(Math.random()*ar.size()+1);
+            if (fid != sid){
+                pw.println(fid + " " + sid);
             }
             System.out.println(fid);
             System.out.println(sid);
 
         }
         pw.close();
+
+        Scanner infr = new Scanner(new File(FRIENDS));
+        while (infr.hasNext()) {
+            String inf[] = in.nextLine().split(" ");
+            int fi = inf[0];
+            int si = inf[1];
+
+
+        }
     }
 
 }
